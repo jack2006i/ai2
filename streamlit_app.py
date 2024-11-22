@@ -12,7 +12,7 @@ file_id = '1GA1udskpjk3PtvAxW8pteUcigZU-0hIT'
 # Google Drive에서 파일 다운로드 함수
 @st.cache(allow_output_mutation=True)
 def load_model_from_drive(file_id):
-    url = f'https://drive.google.com/uc?id={file_id}'+
+    url = f'https://drive.google.com/uc?id={file_id}'
     output = 'model.pkl'
     gdown.download(url, output, quiet=False)
 
@@ -49,7 +49,7 @@ def display_right_content(labels):
     # 2nd Row - YouTube Videos based on labels
     for i, label in enumerate(labels[:3]):
         with cols[i]:
-            st.video("https://www.youtube.com/watch?v=3JZ_D3ELwOQ", start_time=0)
+            st.video("https://www.youtube.com/watch?v=sVTy_wmn5SU", start_time=0)
             st.caption(f"유튜브: {label}")
 
     # 3rd Row - Text based on labels
